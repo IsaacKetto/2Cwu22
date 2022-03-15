@@ -4,7 +4,49 @@
     transition: 0.5 s;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
-  nav {
+
+@media (min-width: 601px){
+    #container{
+        display: grid;
+        width: 100vw;
+        grid-template-areas: 
+        'main main'
+        'as tx'
+        'ft ft'
+    }
+    
+    #main{
+        grid-area: main;
+        background-color: aqua;
+        height: 100vh;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #as{
+        grid-area: as;
+        background-color: blueviolet;
+    }
+    #tx{
+        grid-area: tx;
+        background-color: blue;
+    }
+    #ft{
+        grid-area: ft;
+        background-color: brown;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        height: 8vh;
+    }
+}
+
+nav {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,7 +54,19 @@
     background-color: blue;
     color: white;
     height: 8vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+  a {
+    color: white;
+    text-decoration: none;
   }
+
+  a:hover {
+      color: rgb(189, 188, 255);
+  }
+
   nav .links {
     display: flex;
   }
@@ -44,5 +98,36 @@
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+    }
+    #container{
+        display: grid;
+        width: 100vw;
+        grid-template-areas: 
+        'main main'
+        'as tx'
+        'ft ft'
+    }
+    
+    #main{
+        grid-area: main;
+        background-color: aqua;
+        height: 100vh;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #as{
+        grid-area: as;
+        background-color: blueviolet;
+    }
+    #tx{
+        grid-area: tx;
+        background-color: blue;
+    }
+    #ft{
+        grid-area: ft;
+        background-color: brown;
     }
   }
