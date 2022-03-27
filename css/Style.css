@@ -9,10 +9,11 @@
     #container{
         display: grid;
         width: 100vw;
+        grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
-        'main main'
-        'as tx'
-        'ft ft'
+        'main main main main'
+        'as tx tx tx'
+        'ft ft ft ft'
     }
     
     #main{
@@ -28,6 +29,7 @@
     #as{
         grid-area: as;
         background-color: blueviolet;
+        height: 400px;
     }
     #tx{
         grid-area: tx;
@@ -42,6 +44,11 @@
         justify-content: space-around;
         align-items: center;
         height: 8vh;
+    }
+
+    #img_size{
+      width: 100%;
+      height: 400px;
     }
 }
 
@@ -79,8 +86,9 @@ nav {
   .mobile-menu {
     color: white;
     display: none;
-    position: absolute;
+    position: fixed;
     right: 0;
+    top: 8vh;
     height: 60vh;
     width: 70vw;
     background-color: blue;
@@ -118,13 +126,20 @@ nav {
         flex-direction: column;
         justify-content: center;
     }
+
+    #img_size{
+      height: 400px;
+    }
+
     #as{
         grid-area: as;
         background-color: blueviolet;
+        height: 400px;
     }
     #tx{
         grid-area: tx;
         background-color: blue;
+        width: 75vw;
     }
     #ft{
         grid-area: ft;
