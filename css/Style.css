@@ -4,8 +4,13 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
+body{
+  background-color: rgba(0, 0, 0, 1);
+  overflow-x: hidden;
+}
+
 @media (min-width: 601px){
-  #menu_gallery{
+  #menu{
     display: grid;
     height: 8vh;
     grid-template-areas:
@@ -23,7 +28,6 @@
   #container{
         display: grid;
         width: 100vw;
-        grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
         'main main main main'
         'as tx tx tx'
@@ -33,7 +37,8 @@
   #hd{
     grid-area: hd;
     text-align: center;
-    font-size: xx-large;
+    font-size: 4rem;
+    color: #ffffff;
     text-transform: uppercase;
     font-weight: bolder;
     font-family: Arial, Helvetica, sans-serif;
@@ -48,20 +53,30 @@
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
+        background-image: url(../img/Index\ bakgrund.jpg);
+        margin-bottom: 20rem;
     }
     #as{
         grid-area: as;
-        background-color: blueviolet;
+        background-color: black;
         height: 400px;
     }
     #tx{
         grid-area: tx;
-        background-color: blue;
-        padding: 1rem;
+        background-color: rgba(255, 136, 0, 1);
+        border-radius: 2rem;
+        padding: 1.5rem;
+        height: 352px
     }
+
+    #as + #tx{
+      margin-bottom: 20rem;
+    }
+
     #ft{
         grid-area: ft;
-        background-color: brown;
+        background-color: black;
+        color: #ffffff;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -70,9 +85,14 @@
         height: 8vh;
     }
 
+    .nav_links{
+      background-color: orange;
+    }
+
     #img_size{
-      width: 100%;
+      width: 300px;
       height: 400px;
+      border-radius: 2rem;
     }
 
     #mn{
@@ -106,8 +126,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: black;
     padding: 0px 30px;
-    background-color: blue;
     color: white;
     height: 8vh;
     width: 100%;
@@ -117,6 +137,9 @@ nav {
   a {
     color: white;
     text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 1rem;
+    margin: 0 10px;
   }
 
   a:hover {
@@ -131,6 +154,9 @@ nav {
   }
   #mobile-menu-btn {
     display: none;
+    background-color: orange;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
   }
   .mobile-menu {
     color: white;
@@ -140,25 +166,40 @@ nav {
     top: 8vh;
     height: 60vh;
     width: 70vw;
-    background-color: blue;
+    background-color:black;
   }
 
   @media (max-width: 600px) { /*Om skärmen är för liten*/
     #mobile-menu-btn {
       display: block;
     }
+
     nav p {
       display: none;
     }
+
+    .nav_links_mini{
+      background-color: orange;
+    }
+
     .mobile-menu {
       display: none;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
     }
+
+    #menu{
+      display: grid;
+      height: 8vh;
+      grid-template-areas:
+      'nav nav nav nav'
+    }
+
     #container{
         display: grid;
         width: 100vw;
+        grid-template-rows: 100vh 261px 8rem;
         grid-template-areas: 
         'main main'
         'as tx'
@@ -169,39 +210,53 @@ nav {
       display: grid;
       width: 100vw;
       grid-template-areas:
-      'hd'
-      'mn'
-      'ft'
+      'hd hd'
+      'mn mn'
+      'ft ft'
     }  
+
+    #index_welcome_box{
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      border-radius: 1rem;
+      padding: 0.5rem;
+    }
 
     #main{
         grid-area: main;
-        background-color: aqua;
+        display: block;
         height: 100vh;
         text-align: center;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
-    }
-
-    #img_size{
-      height: 400px;
+        background-image: url(../img/gabriel-beaudry-5X5dCf4Pp44-unsplash.jpg);
+        background-position: center top;
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     #as{
         grid-area: as;
         background-color: blueviolet;
-        height: 400px;
     }
     #tx{
         grid-area: tx;
-        background-color: blue;
-        width: 75vw;
+        background-color: rgba(255, 136, 0, 0.5);
+        color: #ffffff;
+        height: 245px;
+        overflow-y: scroll;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
     }
     #ft{
         grid-area: ft;
-        background-color: brown;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
     }
 
     #mn{
@@ -217,10 +272,15 @@ nav {
     #hd{
       grid-area: hd;
       text-align: center;
+      color: #ffffff;
       font-size: xx-large;
       text-transform: uppercase;
       font-weight: bolder;
       font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .bild{
+      width: 90vw;
     }
 
     .hide{
