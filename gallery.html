@@ -9,36 +9,36 @@
 </head>
 <body>
 
-  <div id="menu">
+  <div class="menu">
       <!-- Large Screen Navigation Bar -->
       <nav>
         <div class="logo">
-          Logo
+          <img src="img\Logo.png" alt="Logo">
         </div>
         <div class="links">
-          <a href="index.html" class="nav_links"><p>Home</p></a>
-          <a href="blogg.html" class="nav_links"><p>Blogg</p></a>
-          <a href="gallery.html" class="nav_links"><p>Gallery</p></a>
+          <a href="index.html" class="nav_links" id="a"><p>Home</p></a>
+          <a href="blogg.html" class="nav_links" id="a"><p>Blogg</p></a>
+          <a href="gallery.html" class="nav_links" id="a"><p>Gallery</p></a>
           <strong id="mobile-menu-btn">Menu</strong>
         </div>
       </nav>
       <!-- Small Screen Navigation Bar -->
       <div class="mobile-menu">
-          <a href="index.html" class="nav_links_mini"><p>Home</p></a>
-          <a href="blogg.html" class="nav_links_mini"><p>Blogg</p></a>
-          <a href="gallery.html" class="nav_links_mini"><p>Gallery</p></a>
+          <a href="index.html" class="nav_links_mini" id="a"><p>Home</p></a>
+          <a href="blogg.html" class="nav_links_mini" id="a"><p>Blogg</p></a>
+          <a href="gallery.html" class="nav_links_mini" id="a"><p>Gallery</p></a>
       </div>
 </div>
 
   <div id="container_gallery">
-      <header id="hd">Gallery</header>
+      <header class="hd">Gallery</header>
       <main id="mn">
         <div>
           <img src="img\Aot.jpg" alt="Bild på anime" class="bild">
           <p class="hide">Källa: Lorem ipsum dolor sit.</p>
         </div>
         <div>
-          <img src="img\Aot.jpg" alt="Bild på anime" class="bild">
+          <img src="img/demon slayer.jpg" alt="Bild på anime" class="bild">
           <p class="hide">Källa: Lorem ipsum dolor sit.</p>
         </div>
         <div>
@@ -67,8 +67,10 @@
         </div>
       </main>
       <footer id="ft">
-        <h5>Mail: LoremIpsum@gmail.com</h5>
-        <h5>Telefonnummer: +46 177-013-420-69</h5>
+        <span class="footertext">
+          <h5>Mail: LoremIpsum@gmail.com</h5>
+          <h5>Telefonnummer: +46 177-013-420-69</h5>
+      </span>
       </footer>
     </div>
 </body>
