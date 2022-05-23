@@ -1,12 +1,20 @@
 *{
     padding: 0px;
     margin: 0px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Helvetica, sans-serif;
     box-sizing: border-box;
   }
-
+  
 .white_text{
   color: #f1f1f1;
+}
+
+.paddingtext{
+  padding: 0.5rem;
+}
+
+.verdana{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #link{
@@ -72,14 +80,32 @@ form.example::after {
     display: grid;
     grid-template-areas:
     'hd hd hd hd'
-    'ig te te te'
-    'te2 te2 te2 ig2'
+    'ig te te te3'
+    'te2 te2 te4 ig2'
     'rt rt ig3 ig3'
     'ft ft ft ft'
   }
   
   .img_border{
     border-radius: 2rem;
+  }
+
+  #te4{
+    grid-area: te4;
+    background-color: rgba(255, 136, 0, 1);
+    color: #000000;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 2rem;
+  }
+
+  #te3{
+    grid-area: te3;
+    background-color: rgba(255, 136, 0, 1);
+    color: #000000;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 2rem;
   }
 
   #rt{
@@ -123,6 +149,10 @@ form.example::after {
     margin: 2rem;
   }
 
+  #ig_resize{
+    margin-left: 3rem;
+  }
+
   #te{
     grid-area: te;
     background-color: rgba(255, 136, 0, 1);
@@ -141,6 +171,10 @@ form.example::after {
     margin: 2rem;
   }
 
+  .size_up{
+    font-size: 2rem;
+  }
+
   #flex_list{
     margin-top: 1rem;
     display: flex;
@@ -156,8 +190,123 @@ form.example::after {
     width: 100vw;
     grid-template-areas: 
     'main main main main'
-    'as tx tx tx'
+    'as tx tx tx2'
+    'bg bg gl gl'
     'ft ft ft ft'
+  }
+
+  .text_size{
+    font-size: 3rem;
+  }
+
+  .bg_links{
+    background-color: #000000;
+    font-size: 3rem;
+    color: rgba(255, 136, 0, 1);
+    text-align: center;
+  }
+
+  .bg_a{
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 1rem;
+    margin: 0 10px;
+    padding: 2rem;
+  }
+
+  .bg_a:hover{
+    color: rgb(189, 188, 255);
+  }
+
+  #bg{
+    grid-area: bg;
+    display: grid;
+    background-color: rgba(255, 136, 0, 1);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    height: 600px;
+    width: minmax(auto, 50vw);
+    margin-left: 5rem;
+    margin-right: 2rem;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 40% 25% 25%;
+    grid-template-areas:
+    'heade heade'
+    'image txt'
+    'image txt'
+    'gridButton gridButton'
+  }
+
+  #heade{
+    grid-area: heade;
+  }
+
+  #image{
+    grid-area: image;
+    margin-top: 1rem;
+  }
+
+  #txt{
+    grid-area: txt;
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding-left: 3rem;
+  }
+
+  #gridButton{
+    grid-area: gridButton;
+  }
+
+  #gl{
+    grid-area: gl;
+    display: grid;
+    background-color: rgba(255, 136, 0, 1);
+    border-radius: 2rem;
+    width: minmax(auto, 50vw);
+    padding: 1.5rem;
+    height: 600px;
+    margin-right: 5rem;
+    margin-left: 2rem;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 40% 25% 25%;
+    grid-template-areas:
+    'gl_heade gl_heade'
+    'gl_image gl_txt'
+    'gl_image gl_txt'
+    'gl_gridButton gl_gridButton'
+  }
+
+  #gl_gridButton{
+    grid-area: gl_gridButton;
+  }
+
+  #gl_heade{
+    grid-area: gl_heade;
+  }
+
+  #gl_txt{
+    grid-area: gl_txt;
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  #gl_image{
+    grid-area: gl_image;
+    margin-top: 1rem;
+  }
+
+  #bg, #gl{
+    margin-bottom: 10rem;
+  }
+
+  #img_header{
+    padding-left: 8.5rem;
+    font-size: 2rem;
+  }
+
+  .center{
+    text-align: center;
+    padding-bottom: 1rem;
   }
 
   .hd{
@@ -167,7 +316,8 @@ form.example::after {
     color: #ffffff;
     text-transform: uppercase;
     font-weight: bolder;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 1rem;
   }
 
     .blogg_box{
@@ -186,7 +336,7 @@ form.example::after {
         flex-direction: column;
         justify-content: center;
         background-image: url(../img/Index_bakgrund.jpg);
-        margin-bottom: 20rem;
+        margin-bottom: 15rem;
     }
     #as{
         grid-area: as;
@@ -199,13 +349,32 @@ form.example::after {
         border-radius: 2rem;
         color: #000000;
         padding: 1.5rem;
-        height: 400px
+        margin-top: 37px;
+        height: 400px;
+        width: 700px;
+        margin-left: 10rem;
     }
 
-    #as + #tx{
-      margin-bottom: 20rem;
-      margin-left: 5rem;
+    #tx2{
+      grid-area: tx2;
+      background-color: rgba(255, 136, 0, 1);
+      border-radius: 2rem;
+      color: #000000;
+      padding: 2rem;
+      margin-top: 37px;
       margin-right: 5rem;
+      height: 400px;
+      width: 400px;
+    }
+
+    #as, #tx, #tx2{
+      margin-bottom: 15rem;
+    }
+
+    .list_items_tx2{
+      padding-bottom: 2rem;
+      padding-left: 1rem;
+      font-size: 1.3rem;
     }
 
     .footertext{
@@ -484,10 +653,13 @@ nav {
     #container{
         display: grid;
         width: 100vw;
-        grid-template-rows: 100vh 261px 8rem;
+        grid-template-rows: 100vh 261px 300px 630px 660px 8rem;
         grid-template-areas: 
         'main main'
         'as tx'
+        'tx2 tx2'
+        'bg bg'
+        'gl gl'
         'ft ft'
     }
     
@@ -497,10 +669,119 @@ nav {
       'hd1 hd1'
       'ig ig'
       'te te'
+      'te3 te3'
       'ig2 ig2'
       'te2 te2'
+      'te4 te4'
       'rt ig3'
       'ft ft'
+    }
+
+    #te3{
+      grid-area: te3;
+      background-color: rgba(255, 136, 0, 1);
+      color: black;
+      border-radius: 2rem;
+      padding: 2rem;
+      margin: 2rem;
+      width: 320px;
+      height: 300px;
+      overflow-y: scroll;
+    }
+
+    #te4{
+      grid-area: te4;
+      background-color: rgba(255, 136, 0, 1);
+      color: black;
+      border-radius: 2rem;
+      padding: 2rem;
+      margin: 2rem;
+      width: 320px;
+      height: 300px;
+      overflow-y: scroll;
+    }
+
+    #bg{
+      grid-area: bg;
+      background-color: rgba(255, 136, 0, 1);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-top: 5rem;
+      width: 100%;
+    }
+
+    #gridButton{
+      margin-left: 35%;
+    }
+
+    #image{
+      margin-top: 1rem;
+      width: 80%;
+      margin-left: 2rem;
+    }
+
+    #txt{
+      text-align: center;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .bg_links{
+      background-color: #000000;
+      font-size: 1rem;
+      color: rgba(255, 136, 0, 1);
+      text-align: center;
+    }
+  
+    .bg_a{
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 1rem;
+      padding: 2rem;
+    }
+
+    #gl{
+      grid-area: gl;
+      background-color: rgba(255, 136, 0, 1);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-top: 5rem;
+      width: 100%;
+    }
+
+    #gl_gridButton{
+      margin-left: 33%;
+    }
+
+    #gl_image{
+      width: 80%;
+      margin-left: 2rem;
+      margin-top: 1rem;
+    }
+
+    #gl_txt{
+      text-align: center;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    #tx2{
+      grid-area: tx2;
+      width: 100%;
+      border-radius: 1rem;
+      padding-left: 2rem;
+      padding-top: 1rem;
+      margin-top: 4rem;
+      color: #000000;
+      background-color: rgba(255, 136, 0, 1);
+    }
+
+    #img_header{
+      text-align: center;
+    }
+
+    .list_items_tx2{
+      padding-bottom: 1rem;
     }
 
     #container_gallery{
@@ -517,6 +798,7 @@ nav {
       color: white;
       border-radius: 1rem;
       padding: 0.5rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
     #main{
@@ -534,18 +816,26 @@ nav {
     }
 
     #as{
-        grid-area: as;
-        background-color: black;
+      grid-area: as;
+      background-color: black;
     }
+
     #tx{
         grid-area: tx;
         background-color: rgba(255, 136, 0, 1);
         color: black;
         height: 261px;
+        width: 48vw;
         overflow-y: scroll;
         padding: 0.5rem;
         border-radius: 0.5rem;
+        margin-top: 28px;
     }
+
+    .center{
+      text-align: center;
+    }
+
     #ft{
         grid-area: ft;
         color: black;
